@@ -4,13 +4,13 @@ import { UserContext } from '../context/UserContext';
 
 const Index = () => {
 
-    const msg = useContext(UserContext);
-
+    // const msg = useContext(UserContext);
+    const {value} = useContext(UserContext);
 
     return(
         <div>
             <h1>Index</h1>
-            <>{msg}</>
+            <>{value}</>
         </div>
     )
 }

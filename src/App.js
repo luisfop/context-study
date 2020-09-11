@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useState } from "react";
 
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 
@@ -7,7 +7,10 @@ import Index from "./pages";
 
 import { UserContext } from "./context/UserContext";
 
+
 function App() {
+
+  const [value, setValue ] = useState("This a value")
   return (
     <Router>
       <div className="App">
@@ -21,7 +24,7 @@ function App() {
             </li>
           </ul>
         </nav>
-        <UserContext.Provider value="Hello from UserContext">
+        <UserContext.Provider value={{value, setValue}}>
           <Route path="/about/" component={About} />
           <Route path="/" exact component={Index} />
         </UserContext.Provider>
