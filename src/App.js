@@ -10,7 +10,7 @@ import { UserContext } from "./context/UserContext";
 
 function App() {
 
-  const [value, setValue ] = useState("This a value")
+  const [user, setUser ] = useState(null)
   return (
     <Router>
       <div className="App">
@@ -24,7 +24,7 @@ function App() {
             </li>
           </ul>
         </nav>
-        <UserContext.Provider value={{value, setValue}}>
+        <UserContext.Provider value={{user, setUser}}>
           <Route path="/about/" component={About} />
           <Route path="/" exact component={Index} />
         </UserContext.Provider>

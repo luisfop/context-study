@@ -7,12 +7,12 @@ import { UserContext } from '../context/UserContext';
 const About = () => {
 
     // const msg = useContext(UserContext)
-     const { value, setValue } = useContext(UserContext)
+     const { user } = useContext(UserContext)
     return(
         <div>
             <h1>About</h1>
-            <>{value}</>
-            <button onClick={() => setValue('Troqueii!!  =) ! ')}>Change Value</button>
+            <p>{JSON.stringify(user,null,2)}</p>
+
 
         </div>
     )
